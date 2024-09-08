@@ -3,10 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Demo</title>
+  <title>Demo Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .title-section {
+      text-align: center;
+      padding: 20px 0;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .authors {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+    .section {
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+    }
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .caption {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .audio-player {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Demo!</h1>
-  <p>This is a simple demo page hosted on GitHub Pages.</p>
+
+  <div class="container">
+    <div class="title-section">
+      <h1>MusicLM: Generating Music From Text</h1>
+      <p class="authors">Andrea Agostinelli, Timo I. Denk, Zalán Borsos, etc.</p>
+    </div>
+
+    <div class="abstract">
+      <strong>Abstract:</strong> We introduce MusicLM, a model generating high-fidelity music from text descriptions such as 
+      <em>“a calming violin melody backed by a distorted guitar riff.”</em> MusicLM casts the process of conditional music generation as a hierarchical sequence-to-sequence modeling task...
+    </div>
+
+    <div class="section">
+      <h2>Audio Generation From Rich Captions</h2>
+      <div class="caption">
+        <strong>Caption:</strong> The main soundtrack of an arcade game. It is fast-paced and upbeat, with a catchy electric guitar riff...
+      </div>
+      <div class="audio-player">
+        <span>Generated audio</span>
+        <audio controls>
+          <source src="audio-file.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
