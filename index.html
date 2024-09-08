@@ -57,382 +57,145 @@
     </div>
 
 
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>Audio Generation From Rich Captions</h3>
+    <div class="c1">
+      <h3 class="example-title">The Lion King</h3>
+      <div class="example-c">
+        <div class="btn-c">
+          <div class="h-desc">
+            <button id="demo1-h-btn" class="my-btn h-btn">
+              High-level Descriptions
+            </button>
+          </div>
 
-      <div class="container pt-3">
+          <!-- The Modal -->
+          <div id="demo1-h" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="close1-h" class="close-btn">&times;</span>
+              <p class="no-copy">
+                Given the following image captions from a video: 1) the sun is
+                setting behind a tree in the dark 2) the sun is setting over the
+                horizon in the distance 3) the sun is setting over the horizon
+                in the distance 4) the lion king wallpapers the lion king
+                wallpapers the lion king wallpapers the lion king wallpapers the
+                lion king wallpapers the lion king wallpapers 5) the lion king,
+                lion king, lion king 2, lion king 2 wallpaper, lion king
+                wallpaper, lion king wallpaper hd wallpaper 6) a rhinoceros is
+                standing in the grass with an orange sky in the background 7)
+                the lion king, lion king, lion king 2, lion king 2 wallpaper,
+                lion king 2 wallpaper, lion king 2 wallpaper hd wallpaper 8)
+                disney's the lion king the lion, the witch and the Wardrobe 9)
+                the lion king the lion king the lion king the lion king the lion
+                king the lion king the lion king the lion king the lion king the
+                lion king 10) a group of meerkats standing on top of a hill 11)
+                the lion king the lion king the lion king the lion king the lion
+                king the lion king the lion king the lion king the lion king the
+                lion king 12) a lion stands on top of a hill with an orange sky
+                in the background 13) a painting of two storks standing in the
+                water 14) an animated image of a large bird standing on the
+                water 15) an animated image of a bird sitting on a branch 16) a
+                painting of two birds flying over a body of water 17) an
+                animated image of a large bird flying over a body of water 18) a
+                waterfall with birds flying over it at sunset 19) a black
+                background with an airplane flying in the air 20) a black
+                background with an airplane flying in the air and the following
+                transcriptions: 1) Naaan simpwenyaa mabaghi ti baba (SPEAKER_00)
+                2) Si ji ko mou (SPEAKER_00) 3) Venyaa mabogh (SPEAKER_00) 4)
+                Venyaa mabogh (SPEAKER_00) 5) Naaan simpwenyaa mabaghi ti baba
+                (SPEAKER_02) 6) Si ji ko mou (SPEAKER_01) 7) Venyaa mabogh
+                (SPEAKER_01) 8) Hai baba (SPEAKER_01) 9) Venyaa mabogh
+                (SPEAKER_01) 10) Si yo mou baba (SPEAKER_03) 11) Venyaa mabogh
+                (SPEAKER_03) 12) Venyaa mabogh (SPEAKER_03) and given that the
+                sentiments of the video are: calm 46.67% sad 33.33% inspiring
+                20.00% Describe the music that would fit such a video. Your
+                output will be fed to a text to music model. To help you out,
+                here are some prompts that worked well with the model: 1) Pop
+                dance track with catchy melodies, tropical percussion, and
+                upbeat rhythms, perfect for the beach 2) classic reggae track
+                with an electronic guitar solo 3) earthy tones, environmentally
+                conscious, ukulele-infused, harmonic, breezy, easygoing, organic
+                instrumentation, gentle grooves 4) lofi slow bpm electro chill
+                with organic samples 5) violins and synths that inspire awe at
+                the finiteness of life and the universe 6) 80s electronic track
+                with melodic synthesizers, catchy beat and groovy bass Give me
+                only the description of the music without any explanation. Give
+                me a single description.
+              </p>
+            </div>
+          </div>
 
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="rich-captions"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="rich-captions-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="rich-captions-2" class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a id="rich-captions-3" class="page-link" href="#">3</a>
-            </li>
-          </ul>
+          <div class="l-desc">
+            <button id="demo1-l-btn" class="my-btn l-btn">
+              Low-level Music Conditions
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div id="demo1-l" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="close1-l" class="close-btn">&times;</span>
+              <p class="no-copy">
+                Majestic African-inspired instrumentation with gentle
+                percussions, soothing flutes, and melodic chants evoking the
+                serenity of vast landscapes, intertwined with melancholic
+                strings capturing moments of introspection, culminating in
+                uplifting crescendos that inspire hope and awe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vid-c">
+          <div class="vid" id="vid1-orig">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/t3lqCJSxE7c?si=JRWVMf-2NwkTTGjR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            >
+            </iframe>
+
+            <p class="label">Original</p>
+          </div>
+
+          <div class="vid" id="vid1-gen">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/yJ9BUZ17iV8?si=_WEN_01xJgcwPxAR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            <p class="label">Herrmann-1</p>
+          </div>
+
+          <div class="vid" id="vid1-cmt">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/XOhlwJAONn8?si=2HOuDE8AZ9oRbqLJ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            <p class="label">CMT</p>
+          </div>
         </div>
       </div>
     </div>
-
-
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>Long Generation</h3>
-      <div class="container pt-3">
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2 wide-audio"
-            id="longgen-generation"
-          >
-            <thead>
-              <tr>
-                <th>Text prompt</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>Story Mode</h3>
-The audio is generated by providing a sequence of text prompts. These influence how the model continues the semantic tokens derived from the previous caption.
-      <div class="container pt-3">
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2 wide-audio"
-            id="storymode-generation"
-          >
-            <thead>
-              <tr>
-                <th>Text prompts</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>Text and Melody Conditioning</h3>
-      By adding melody embeddings to the conditioning, we can generate
-      music that respects the text prompt while following the provided melody.
-
-      <div class="container pt-3">
-
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="melody-conditioning-generation"
-          >
-            <tbody></tbody>
-          </table>
-       </div>
-      </div>
-    </div>
-
-
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>Painting Caption Conditioning</h3>
-
-      <div class="container pt-3">
-
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="painting-generation"
-          >
-            <thead>
-              <tr>
-                <th>Painting title and author</th>
-                <th>Painting image (from Wikipedia)</th>
-                <th>Painting description</th>
-                <th>Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="painting-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="painting-generation-2" class="page-link" href="#">2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>10s Audio Generation From Text</h3>
-
-      <div class="container pt-3">
-        <h5>Instruments</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="instruments-generation"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="instruments-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="instruments-generation-2" class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a id="instruments-generation-3" class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a id="instruments-generation-4" class="page-link" href="#">4</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container pt-3">
-        <h5>Genres</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="genres-generation"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="genres-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="genres-generation-2" class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a id="genres-generation-3" class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a id="genres-generation-4" class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a id="genres-generation-5" class="page-link" href="#">5</a>
-            </li>
-            <li class="page-item">
-              <a id="genres-generation-6" class="page-link" href="#">6</a>
-            </li>
-            <li class="page-item">
-              <a id="genres-generation-7" class="page-link" href="#">7</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container pt-3">
-        <h5>Musician Experience Level</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="experience-generation"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="experience-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="experience-generation-2" class="page-link" href="#">2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container pt-3">
-        <h5>Places</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="places-generation"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="places-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="places-generation-2" class="page-link" href="#">2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container pt-3">
-        <h5>Epochs</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="epochs-generation"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="epochs-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="epochs-generation-2" class="page-link" href="#">2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container pt-3">
-        <h5>Accordion Solos</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="accordion-generation"
-          >
-            <thead>
-              <tr>
-                <th>Caption</th>
-                <th style="text-align: right">Generated audio</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="accordion-generation-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="accordion-generation-2" class="page-link" href="#">2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-   </div>
-
-
-    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-      <h3>Generation Diversity</h3>
-      We test the diversity of the generated samples while keeping constant
-      the conditioning and/or the semantic tokens.
-
-      <div class="container pt-3">
-        <h5>Same Text Prompt</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="diversity-checks-txt"
-          >
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="diversity-checks-txt-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-txt-2" class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-txt-3" class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-txt-4" class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-txt-5" class="page-link" href="#">5</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container pt-3">
-        <h5>Same Text Prompt and Same Semantic Tokens</h5>
-        <div class="table-responsive pt-3">
-          <table
-            class="table pt-2"
-            id="diversity-checks-semantic"
-          >
-            <tbody></tbody>
-          </table>
-          <ul class="pagination justify-content-center">
-            <li class="page-item active">
-              <a id="diversity-checks-semantic-1" class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-semantic-2" class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-semantic-3" class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-semantic-4" class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a id="diversity-checks-semantic-5" class="page-link" href="#">5</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
+<!--     </div> -->
 
 
   </body>
