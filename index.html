@@ -421,6 +421,127 @@ A lively dance of piano notes playfully intertwining with a gentle violin melody
       </div>
     </div>
 
+
+    <div class="c1">
+      <h3 class="example-title">Nichijou Soup (Genre - Humour)</h3>
+      <p>Courtesy of Shindou Uni </p>
+      <div class="example-c">
+        <div class="btn-c">
+          <div class="h-desc">
+            <button id="demo2-h-btn" class="my-btn h-btn">
+              M2M-Gen Caption
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div id="demo2-h" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="close2-h" class="close-btn">&times;</span>
+              <p class="no-copy">
+                <b>Input for Page-level Caption Conversion</b> <br/>
+                <b>*Dialogues of the Scene (Output of Step 1)*</b> <br/>
+                The dialogs in the image are as follows <br/>
+                PAGE 14 山朱秋緒: おいお前酒くせぇぞ？<br/>
+                PAGE 14 北ケ谷冬華: オイオイ朝から飲んできたのかよー<br/>
+                PAGE 14 藤原成実: フツーにごはん食べてきただけだよぅ<br/>
+                PAGE 14 藤原成実: うん<br/>
+                PAGE 14 藤原成実: ええっ！？<br/>
+                PAGE 14 山朱秋緒: 藤原！今すぐにバイト行こう！<br/>
+                PAGE 14 藤原成実: なに言ってんのまだ学校にきたばっか…<br/>
+                ... <br/>
+                ...<br/>
+                PAGE 15 藤原成実: 家一軒とその近所の清掃と消毒を頼みたいんスけどおー<br/>
+                PAGE 15 北ケ谷冬華: えっ<br/>
+                PAGE 15 北ケ谷冬華: 近所入れると百万ぐらいかかるんスか？<br/>
+ 
+                 <b>*Emotion Recognition of the Scene (Output of Step 2)*</b> <br/>
+                   The faces have the following emotions: 52% neutral, 14% happiness, 14% anger.<br/>
+                 <b>*Scene-Level Caption Conversion (Output of Step 3)*</b> <br/>
+A lighthearted, conversational jazz ensemble piece, featuring a playful piano theme, a grooving stand-up bass line and subtle percussion, reflecting the everyday chatter and occasional disagreement.
+                Please Generate a music description for page 14 in the scene<br/><br/>
+
+                <b>Output for Page-level Caption Conversion (Output of Step 4)</b><br/>
+                <b>Page 1 Caption:</b> A playful yet casual jazz ensemble piece that matches the rhythm of the characters’ lively conversation and arguments, with the piano theme underscoring the mood of the everyday dialogues and a subtly grooving bass line capturing the occasional surprises.
+                <br/>
+                <b>Page 2 Caption:</b> A playful jazz ensemble continues, the piano theme becoming more involved and the stand-up bass line grooving, mirroring the heated decision-making and hustle of the group, as they discuss how to deal with the issue at hand.
+                
+              </p>
+            </div>
+          </div>
+
+          <div class="l-desc">
+            <button id="demo2-l-btn" class="my-btn l-btn">
+             Baseline Caption
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div id="demo2-l" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="close2-l" class="close-btn">&times;</span>
+              <p class="no-copy">
+                <b>Input</b><br/>
+                <b>Page 1 Description</b> The manga pages depict a humorous scene where a group of characters are discussing and experimenting with food. One character appears astonished, while another holds a plate of food and starts explaining something. The other characters show various reactions, ranging from confusion to curiosity, while engaging in animated conversation.
+                <br/>
+                <b>Page 2 Description</b> The image depicts two pages from a manga book with several characters interacting. On the right page, there's a large mushroom growing on top of a house, surprising the onlookers. The left page shows multiple characters engaging in a conversation, with one character lying on the ground, seemingly exhausted or unwell
+                <br/><br/>
+                <b>Output</b><br/>
+                <b>Page 1 Caption:</b> A lively and upbeat jazz piece, filled with plucky pizzicato strings and playful piano notes. This piece should include sudden upward shifts to highlight the surprising moments and a jovial rhythm to keep up the humorous dialogue and exaggerated reactions. The overall tone is light and whimsical to suit the atmosphere of comedy and confusion.
+                <br/>
+                <b>Page 2 Caption:</b> A mysterious and whimsical score featuring light orchestral instruments with a lingering suspense. The music transitions from an airy, somber tone for the fallen character to a bewilderment-filled crescendo upon the reveal of the mushroom building. Elements of surprise intertwine with the music's organic flow.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vid-c">
+          <div class="vid" id="vid2-orig">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/4XP6jDeLvb0?si=9tdKaUXzBj5S7msl"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p class="label">M2M-Gen</p>
+          </div>
+
+          <div class="vid" id="vid2-gen">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/FuMrA2K3-jo?si=Ks3IkT6CCCvF6Wx0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p class="label">Baseline</p>
+          </div>
+
+          <div class="vid" id="vid2-cmt">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/jt9wh0AQDqQ?si=M1RYVP_UqhnM-JSd"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p class="label">Random</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     
     
     
