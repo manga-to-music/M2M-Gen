@@ -48,7 +48,7 @@
 
 
     <div class="c1">
-      <h3 class="example-title">ARMS (Genre: Battle)</h3>
+      <h3 class="example-title">ARMS (Genre - Battle)</h3>
       <p>Courtesy of Kato Masaki </p>
       <div class="example-c">
         <div class="btn-c">
@@ -75,6 +75,7 @@
                   PAGE 23 エリー: さっきの....... <br/>
                   PAGE 23 エリー: ドクン <br/>
                   ... <br/>
+                  ... <br/>
                   PAGE 27 エリー: そこには不安が横たわっていた..... <br/>
                   これで奴を葬り去ることができたんだろうか......<br/>
                   PAGE 27 Others: 大佐っ！<br/>
@@ -87,7 +88,7 @@
                  <b>*Scene-Level Caption Conversion (Output of Step 3)*</b> <br/>
                   The music description for the entire scene is: A suspenseful orchestral track with dark, pressing strings, and intense percussions with occasional pauses for shock, amplifying a sensation of fear and urgency. <br/>
                   <br/>
-                  Please Generate a music description for page 1 in the scene<br/><br/>
+                  Please Generate a music description for page 23 in the scene<br/><br/>
 
                 <b>Output for Page-level Caption Conversion (Output of Step 4)</b><br/>
                 <b>Page 1 Caption:</b> A distressing symphony with a rapid tempo, overwhelming the tense atmosphere with drastic violin strokes and nerve-wracking drum beats, creating a sense of urgency and danger.
@@ -175,6 +176,129 @@
       </div>
     </div>
 
+    <div class="c1">
+      <h3 class="example-title">Tasogare Tsushin (Genre - Horror)</h3>
+      <p>Courtesy of Tanaka Masato </p>
+      <div class="example-c">
+        <div class="btn-c">
+
+          <div class="h-desc">
+            <button id="demo1-h-btn" class="my-btn h-btn">
+              M2M-Gen Caption
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div id="demo1-h" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="close1-h" class="close-btn">&times;</span>
+              <p class="no-copy">
+                <b>Input for Page-level Caption Conversion</b> <br/>
+                <b>*Dialogues of the Scene (Output of Step 1)*</b> <br/>
+                The dialogs in the image are as follows
+                PAGE 8 有森杏子: 深見くん!? <br/>
+                PAGE 8 有森杏子: あの死んじゃった深見くん!? <br/>
+                PAGE 8 有森杏子: 死んだ人間がなんでそこに……… <br/>
+                PAGE 8 有森杏子: ねえったら！ <br/>
+                PAGE 8 有森杏子: 葉月！ <br/>
+                ... <br/>
+                ... <br/>
+                PAGE 9 有森杏子: 深見くんって成績はいいけどその……弱い子で <br/>
+                PAGE 9 有森たつろー: ーわかるよ点数だけとっていればぜんぶうまくいくと思ってる連中だろそういう落ちこんだことのないやつが怖いんだ<br/>
+                PAGE 9 有森たつろー: 死に方も過激だね……<br/>
+                PAGE 9 有森たつろー: やけになってよじのぼった鉄塔に落雷なんて……<br/>
+                PAGE 9 有森たつろー: そりゃ葉月って子もうなされるぜ<br/>
+                PAGE 9 有森杏子: 彼女にはそんなこと言っちゃだめよデリケートな子なんだから<br/>
+                 <b>*Emotion Recognition of the Scene (Output of Step 2)*</b> <br/>
+                  The faces have the following emotions: 30% neutral, 20% surprise, 20% happiness.<br/>
+                 <b>*Scene-Level Caption Conversion (Output of Step 3)*</b> <br/>
+                  An eerie symphony with haunting piano notes, punctuated by the sudden gasps of violin strings, embodying a chilling blend of surprise, dread, and unease.<br/>                  <br/>
+                  Please Generate a music description for page 8 in the scene<br/><br/>
+
+                <b>Output for Page-level Caption Conversion (Output of Step 4)</b><br/>
+                <b>Page 1 Caption:</b> The eerie symphony takes a menacing turn with an unsettling piano melody that underscores the shock and dread in the dialogue, while sudden outbursts from the violin strings highlight the moments of surprise, creating an atmosphere of growing unease.
+                <br/>
+                <b>Page 2 Caption:</b> A melancholic piano melody imbued with chilling dread for the haunting recollection, followed by sudden eerie trembles of violin strings enhancing the surprising revelation and lingering unease.
+              </p>
+            </div>
+          </div>
+
+          <div class="l-desc">
+            <button id="demo1-l-btn" class="my-btn l-btn">
+              Baseline Caption
+            </button>
+          </div>
+
+          <!-- The Modal -->
+          <div id="demo1-l" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span id="close1-l" class="close-btn">&times;</span>
+              <p class="no-copy">
+                <b>Input</b><br/>
+                <b>Page 1 Description</b> In the manga pages, a young girl appears to be in distress as she receives shocking news over the phone. The grayscale artwork captures intense expressions and dramatic atmospheric effects, conveying a sense of urgency and fear as the girl confronts an unknown danger.
+                <br/>
+                <b>Page 2 Description</b> The image depicts two scenes from a manga book: one page shows a girl in a dramatic moment, seemingly in distress and being struck by lightning; the other page involves a conversation between characters, addressing a critical situation while they are inside a car, with a focus on their expressions and reactions. The atmosphere appears intense and emotionally charged
+                <br/><br/>
+                <b>Output</b><br/>
+                <b>Page 1 Caption:</b> The music is a crescendo of high-pitched strings, grated with haunting minor melodies conveying an atmosphere of tension and shock. A sparsely played piano underscores the fear, adding a somber tone, while subtly escalating percussions induce the sense of urgency and anticipated danger.
+                <br/>
+                <b>Page 2 Caption:</b> The music should be intense and electrifying, signifying the emotional turmoil. Begin with sharp, aggressive strings that depicts the strike of lightning. Transition into a somber, dramatic melody with slow-paced piano notes and solemn violins to illustrate the tense conversation in the car. Keep the music dramatic and suspenseful throughout
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vid-c">
+          <div class="vid" id="vid1-orig">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/w9JNqXowPYQ?si=yqILz0NISTQ0MUJ8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            >
+            </iframe>
+
+            <p class="label">M2M-Gen</p>
+          </div>
+
+          <div class="vid" id="vid1-gen">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/Idhbw3kc0b0?si=Xd7tN4tPFf7-TE5Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            <p class="label">Baseline</p>
+          </div>
+
+          <div class="vid" id="vid1-cmt">
+            <iframe
+              width="560"
+              height="315"
+              class="vid-iframe"
+              src="https://www.youtube.com/embed/q1A1uuS-2Ds?si=o-f6TNDP4Bh9q-_l"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            <p class="label">Random</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
     
   
