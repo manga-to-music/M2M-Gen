@@ -24,6 +24,18 @@
           This paper introduces M2M-Gen, a multimodal framework for generating background music tailored to Japanese manga. The key challenges in this task are the lack of available data or a baseline. We propose M2M-Gen, an automated background music generation pipeline which produces background music for an input manga book. Initially, we use the dialogues in a manga to detect scene boundaries, then perform emotion classification and generate detailed captions for each page within a scene. GPT-4o transforms these detailed music captions into high-level musical directives that guide a text-to-music model to produce music aligned with the manga's evolving narrative. The effectiveness of M2M-Gen is confirmed through extensive subjective evaluations, showcasing its capability to significantly enhance the manga reading experience by synchronizing music that complements specific scenes.
       </p>
 
+      <figure>
+        <img
+          style="margin-top: 40px; width: 100%; margin-bottom: 20px"
+          src="pipeline.png"
+          alt="M2M-Gen Pipeline"
+        />
+        <figcaption>
+          <b>Fig. 1</b> Our background music generation pipeline takes a manga
+          book as input and generates a tailored audio music file for manga scenes.
+        </figcaption>
+      </figure>
+
 
       <p style="margin-top: 30px">
         The following sections provide examples of background music generated for 
@@ -37,6 +49,7 @@
 
     <div class="c1">
       <h3 class="example-title">ARMS (Genre: Battle)</h3>
+      <p>Courtesy of Kato Masaki </p>
       <div class="example-c">
         <div class="btn-c">
 
@@ -53,7 +66,7 @@
               <span id="close1-h" class="close-btn">&times;</span>
               <p class="no-copy">
                 <b>Input for Page-level Caption Conversion</b> <br/>
-                <b>*Dialogues*</b> <br/>
+                <b>*Dialogues of the Scene (Output of Step 1)*</b> <br/>
                  The dialogs in the image are as follows <br/>
                   PAGE 23 エリー: うっ！？ <br/>
                   PAGE 23 エリー: ドクン <br/>
@@ -69,14 +82,14 @@
                   PAGE 27 大佐: いいじゃねえかよ<br/>
                   かたいこというない<br/>
                   PAGE 27 エリー: 異形の魂を覗きこんだ恐怖がまだ胸にのこってる.....<br/>
-                 <b>*Emotion Recognition*</b> <br/>
+                 <b>*Emotion Recognition of the Scene (Output of Step 2)*</b> <br/>
                   The faces have the following emotions: 57% neutral, 13% surprise, 13% fear.<br/>
-                 <b>*Scene-Level Caption Conversion *</b> <br/>
+                 <b>*Scene-Level Caption Conversion (Output of Step 3)*</b> <br/>
                   The music description for the entire scene is: A suspenseful orchestral track with dark, pressing strings, and intense percussions with occasional pauses for shock, amplifying a sensation of fear and urgency. <br/>
                   <br/>
                   Please Generate a music description for page 1 in the scene<br/><br/>
 
-                <b>Output for Page-level Caption Conversion</b><br/>
+                <b>Output for Page-level Caption Conversion (Output of Step 4)</b><br/>
                 <b>Page 1 Caption:</b> A distressing symphony with a rapid tempo, overwhelming the tense atmosphere with drastic violin strokes and nerve-wracking drum beats, creating a sense of urgency and danger.
                 <br/>
                 <b>Page 2 Caption:</b> A high-intensity orchestral track with pounding percussions and rising strings characterizing the escalating tension and ensuing chaos. The music oscillates between rapid, alarming sequences and abrupt, suspenseful pauses that signify pivotal moments of challenge and decision-making. A continuous undercurrent of unease simmers throughout, signifying the looming dread and high-stakes pressure.
